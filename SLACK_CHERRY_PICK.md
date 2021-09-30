@@ -4,6 +4,7 @@ Maintains a running list of github.com/facebook/hhvm commits cherry-picked into 
 |--------------|----------------|
 | none | 4602404b1f2a0812465eef15e0cf9697607c3bf2 is a Slack patch to enable us to compile without USE_JSONC while still retaining permissive json_decode behaviors |
 | none | c890b8c388ccc762e4a186099da02a8e2a45b8c5 is a Slack patch to make json_decode return darrays or varrays by default, not just darrays |
+| none | 62cf51b8cf073e90224e0a382b44a7faab2f2be9 is a Slack patch to make this build succeed, fixing some build errors related to folly. These may be upstreamed, see discussion [here](https://hacklang.slack.com/archives/CAVPCQUQK/p1633021894009300) |
 | [9ee508af6c1baf5e64999ae1a3dc4cd9af27b014](https://github.com/facebook/hhvm/commit/9ee508af6c1baf5e64999ae1a3dc4cd9af27b014) | Backported fixes to boost dependency detection code |
 | [6e609158e681fad05056dad6e4674da46897f39b](https://github.com/facebook/hhvm/commit/6e609158e681fad05056dad6e4674da46897f39b) | Backported fix to a race condition in the build process that leads to build flakiness |
 | [5be1acd5313e0121bf3a14ea48cd5e3c63d4019b](https://github.com/facebook/hhvm/commit/5be1acd5313e0121bf3a14ea48cd5e3c63d4019b) | Fixes for timelib which otherwise break our timezone libraries |
