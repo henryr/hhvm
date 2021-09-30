@@ -37,10 +37,10 @@ endif()
 set(FOLLY_CXXFLAGS "-I${JEMALLOC_INCLUDE_DIR} -I${CMAKE_CURRENT_LIST_DIR}/include")
 message(STATUS "FOLLY_CXXFLAGS: ${FOLLY_CXXFLAGS}")
 
-if(${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang" OR ${CMAKE_CXX_COMPILER_ID} STREQUAL "AppleClang")
+if(${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang" OR ${CMAKE_CXX_COMPILER_ID} STREQUAL "AppleClang" OR ENABLE_SSE4_2)
   if(IS_X64)
     message(STATUS "Enabling SSE 4.2 for bundled folly")
-    set(FOLLY_CXXFLAGS "${FOLLY_CXXFLAGS} -msse4.2")
+    set(FOLLY_CXXFLAGS "${FOLLY_CXXFLAGS} -msse4.2 -march=haswell")
   endif()
 endif()
 
